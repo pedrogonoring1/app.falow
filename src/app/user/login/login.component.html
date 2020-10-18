@@ -1,0 +1,51 @@
+<div class="container">
+    
+    <!-- Title Page -->
+    <div class="row text-center">
+        <div class="col-12 bodyTitle aling-items-center">   
+            <h1 class="tileHead">ENTRAR</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+        <div class="row text-center bodyLogin">
+
+            <div class="col-12">    
+                <input type="text" placeholder="E-mail" class="inputTxt" formControlName="email">
+            </div>
+
+            <div class="col-12">
+                <input type="password" placeholder="Senha" class="inputTxt" formControlName="password">
+            </div>
+
+            <div class="col-12 mb-2">
+                <button class="buttonInfo" type="submit" [disabled]="!loginForm.valid">ENTRAR</button>
+            </div>
+
+            <div class="col-12 mb-5" style="margin-top: 20px; margin-bottom: 20px;">
+                <a href="#" >Esqueci minha senha</a>
+            </div>
+
+        </div>
+    </form>
+
+    <div class="row text-center">
+
+
+            <div class="col-12">
+                <button class="buttonInfo" [routerLink]="['/signup']" >CRIAR UMA CONTA</button>
+            </div>
+
+    </div> 
+
+    
+    <div class="row text-center">
+        <div class="col-12 spacingIphone">
+        </div>
+    </div>
+
+
+
+
+</div> <!-- END CONTAINER -->
