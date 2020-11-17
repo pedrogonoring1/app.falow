@@ -10,12 +10,15 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent {
 
-    userLogado = null;
+    userLogado;
 
     constructor(private fb: FormBuilder, private UserService: UserService) {} 
 
     // Config Form Group
-    loginForm = this.fb.group({ email: ['', Validators.required], password: ['', Validators.required] });
+    loginForm = this.fb.group({ 
+      email: ['', Validators.required], 
+      password: ['', Validators.required] 
+    });
 
 
     // Função para envio dos dados do input
@@ -25,14 +28,13 @@ export class LoginComponent {
 
         this.doLogin(objUser);
 
-        console.log(this.userLogado);
-
-
+        
     
     }
 
     doLogin(user: User){
-      this.UserService.login(user).subscribe((user) => this.userLogado = user);
+      this.UserService.login(user).subscribe((user) => {this.userLogado = user; console.log(this.userLogado)});
+      
     }  
 
 }

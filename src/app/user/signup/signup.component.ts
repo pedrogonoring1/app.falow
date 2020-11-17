@@ -30,7 +30,7 @@ export class SignupComponent {
     }
 
     saveUser(user: User) {
-        this.UserService.newUser(user).subscribe(() => {});
+        this.UserService.newUser(user).subscribe((result) => {console.log(result)});
     }
 
 
