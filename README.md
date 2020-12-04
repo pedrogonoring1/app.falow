@@ -1,6 +1,6 @@
 # WebParts
 
-Este projeto tem como caráter acadêmico, onde as informações de fotos e das peças são ficticias.
+Este projeto tem como caráter **acadêmico**, onde as informações de fotos e das peças são **fictícias**.
 
 
 ## Informações Técnicas:
