@@ -5,6 +5,7 @@
 /* Config for inputs */
 .inputTxt{
     width: 400px;
+    width: 60%;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -25,4 +26,12 @@
 }
 .inputTxt:focus{
     border-color: rgb(97, 155, 241);
+}
+
+.picturesParts{
+    width: 100%;
+}
+
+.leftDivInfo{
+    padding-left: 116px;
 }

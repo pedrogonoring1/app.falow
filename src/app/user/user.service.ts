@@ -39,7 +39,7 @@ export class UserService {
             retry(1),
             catchError(this.handleError)
           )
-    }
+    };
 
 
 
