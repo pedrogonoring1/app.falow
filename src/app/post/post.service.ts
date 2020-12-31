@@ -11,7 +11,7 @@ export class PostService {
 
     urlBase = 'https://api-falow.herokuapp.com/post';
     
-    httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.tokenUsuarioLogado}) }
+    httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + this.tokenUsuarioLogado}), withCredentials: true }
 
     todosPostsRecebidosDoBanco: Post[] = [];
 
