@@ -2,41 +2,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { myrouting } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { AlertModule } from 'ngx-bootstrap/alert';
 
 import { AppComponent } from './app.component';
+import { myrouting } from './app.routing';
+import { AdicionarPostComponent } from './post/adicionar-post/adicionar-post.component';
+import { ListarPostsComponent } from './post/listar-posts/listar-posts.component';
 import { LoginComponent } from './user/login/login.component';
-import { SignupComponent } from './user/signup/signup.component';
-import { NewPartComponent } from './Part/New_Part/newpart.component';
-import { AllPartComponent } from './Part/All_Part/allpart.component';
-import { EditPartComponent } from './Part/Edit_Part/editpart.component';
-import { FoundPartComponent } from './Part/Search_Part/foundpart.component';
-import { HomeComponent } from './Home/home.component';
+import { CadastrarUsuarioComponent } from './user/cadastrar-usuario/cadastrar-usuario.component';
+
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    AdicionarPostComponent,
+    ListarPostsComponent,
     LoginComponent,
-    SignupComponent,
-    NewPartComponent,
-    AllPartComponent,
-    EditPartComponent,
-    FoundPartComponent,
-    HomeComponent
+    CadastrarUsuarioComponent
+
   ],
   imports: [
     BrowserModule,
-    AlertModule.forRoot(),
-    ModalModule.forRoot(),
     FormsModule, 
     ReactiveFormsModule,
     myrouting,
-    HttpClientModule
+    HttpClientModule,
+    ButtonsModule.forRoot(),
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

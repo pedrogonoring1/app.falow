@@ -1,0 +1,18 @@
+<div class="container">
+    <!-- Title Page -->
+    <div class="row text-center">
+        <div class="col-12 bodyTitle aling-items-center">   
+            <h1 class="tileHead">Falow.app</h1>
+        </div>
+    </div>
+
+    <app-adicionar-post></app-adicionar-post>
+
+    <div *ngFor="let post of todosPosts.slice().reverse()" class="card mb-3" style="width: 100%;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{ post.mensagem }}</li>
+          <li class="list-group-item"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" alt="" class="tamanhoIconUser"> {{ post.nomeUsuario }}</li>
+        </ul>
+      </div>
+</div>
+

@@ -1,37 +1,19 @@
 import { Routes, RouterModule } from "@angular/router";
 
-//import { HomeComponent } from "./home.component";
+import { AdicionarPostComponent } from "./post/adicionar-post/adicionar-post.component";
+import { ListarPostsComponent } from "./post/listar-posts/listar-posts.component";
+import { CadastrarUsuarioComponent } from "./user/cadastrar-usuario/cadastrar-usuario.component";
 import { LoginComponent } from "./user/login/login.component";
-import { SignupComponent } from "./user/signup/signup.component";
-import { NewPartComponent } from './Part/New_Part/newpart.component';
-import { AllPartComponent } from './Part/All_Part/allpart.component';
-import { EditPartComponent } from './Part/Edit_Part/editpart.component';
-import { FoundPartComponent } from './Part/Search_Part/foundpart.component';
-import { HomeComponent } from './Home/home.component';
+
 
 const APP_ROUTES: Routes = [
-    
-    { path: '', redirectTo: '/home', pathMatch: 'full'},
-    
-    //{ path: 'home', component: HomeComponent},
 
-    { path: 'signup', component: SignupComponent},
-
+    { path: '', redirectTo: '/login', pathMatch: 'full'},
+    { path: 'adicionar-post', component: AdicionarPostComponent},
+    { path: 'cadastrar-usuario', component: CadastrarUsuarioComponent},
     { path: 'login', component: LoginComponent},
+    { path: 'posts', component: ListarPostsComponent}
 
-    { path: 'newpart', component: NewPartComponent},
-
-    { path: 'allpart', component: AllPartComponent},
-
-    { path: 'editpart', component: EditPartComponent },
-
-    { path: 'foundpart', component: FoundPartComponent },
-
-    { path: 'home', component: HomeComponent}
-
-
-    
-    //{ path: 'autenticacao', component: AuthenticationComponent, children: AUTH_ROUTES},
 ];
 
 export const myrouting = RouterModule.forRoot(APP_ROUTES);

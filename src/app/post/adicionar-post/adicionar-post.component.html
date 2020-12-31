@@ -1,0 +1,22 @@
+<div class="container">
+
+    <form [formGroup]="CadastrarPostForm" (ngSubmit)="onSubmit()">
+
+        <div class="row text-center bodyLogin">
+
+            <div class="col-12">
+                <input type="text" placeholder="Digite aqui" class="inputTxtChat" formControlName="mensagem">
+            </div>
+
+            <div class="col-12 mb-2">
+                <button class="buttonInfo mb-5" type="submit" [disabled]="!CadastrarPostForm.valid">Adicionar Mensagem</button>
+            </div>
+
+        </div>
+    </form>
+
+
+
+
+
+</div> <!-- END CONTAINER -->

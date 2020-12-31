@@ -3,11 +3,11 @@
     <!-- Title Page -->
     <div class="row text-center">
         <div class="col-12 bodyTitle aling-items-center">   
-            <h1 class="tileHead">ENTRAR</h1>
+            <h1 class="tileHead">Falow.app</h1>
         </div>
     </div>
 
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formularioLogin" (ngSubmit)="onSubmit()">
 
         <div class="row text-center bodyLogin">
 
@@ -16,11 +16,11 @@
             </div>
 
             <div class="col-12">
-                <input type="password" placeholder="Senha" class="inputTxt" formControlName="password">
+                <input type="password" placeholder="Senha" class="inputTxt" formControlName="senha">
             </div>
 
-            <div class="col-12 mb-2">
-                <button class="buttonInfo" type="submit" [disabled]="!loginForm.valid" [routerLink]="['/newpart']">ENTRAR</button>
+            <div class="col-12 ">
+                <button class="buttonInfo" type="submit" [disabled]="!formularioLogin.valid">ENTRAR</button>
             </div>
 
             <div class="col-12 mb-5" style="margin-top: 20px; margin-bottom: 20px;">
@@ -31,12 +31,9 @@
     </form>
 
     <div class="row text-center">
-
-
-            <div class="col-12">
-                <button class="buttonInfo" [routerLink]="['/signup']" >CRIAR UMA CONTA</button>
-            </div>
-
+        <div class="col-12">
+            <button class="buttonInfo" [routerLink]="['/cadastrar-usuario']" >Criar uma Conta</button>
+        </div>
     </div> 
 
     
@@ -44,6 +41,8 @@
         <div class="col-12 spacingIphone">
         </div>
     </div>
+
+    
 
 
 

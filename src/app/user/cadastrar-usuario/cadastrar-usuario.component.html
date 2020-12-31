@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+<div class="container">
+
+     <!-- Title Page -->
+     <div class="row text-center">
+        <div class="col-12 bodyTitle aling-items-center">   
+            <h1 class="tileHead">Criar Conta</h1>
+        </div>
+    </div>
+
+    <form [formGroup]="CadastrarUsuarioForm" (ngSubmit)="onSubmit()">
+
+        <div class="row text-center bodyLogin">
+
+            <div class="col-12">
+                <input type="text" placeholder="Email" class="inputTxt" formControlName="email">
+            </div>
+
+            <div class="col-12">
+                <input type="text" placeholder="Telefone" class="inputTxt" formControlName="telefone">
+            </div>
+
+            <div class="col-12">    
+                <input type="password" placeholder="Senha" class="inputTxt" formControlName="senha">
+            </div>
+
+            <div class="col-12">
+                <input type="text" placeholder="Nome" class="inputTxt" formControlName="nome">
+            </div>
+
+            <div class="col-12">
+                <input type="text" placeholder="Nome Usuario" class="inputTxt" formControlName="nomeUsuario">
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-xs-12 col-12 col-md-4 form-group">
+                      <input type="text"
+                             placeholder="Data Nascimento"
+                             class="form-control inputTxt"
+                             bsDatepicker class="inputTxt" formControlName="dataNascimento">
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-12 mb-3">
+                <button class="buttonInfo" type="submit" [disabled]="!CadastrarUsuarioForm.valid">CRIAR</button>
+            </div>
+
+
+                <div class="col-12">
+                    <button class="buttonInfo" [routerLink]="['/login']" >Já tenho Conta</button>
+                </div>
+
+        </div>
+    </form>
+
+
+
+
+
+</div> <!-- END CONTAINER -->
